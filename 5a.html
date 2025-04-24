@@ -7,6 +7,7 @@
 </head>
 <body>
   <script>
+    /*
     let Variable = name;
     name = "Larry Okraku";
     console.log(`My name is: ${name}`);
@@ -21,6 +22,33 @@
     console.log(`Cost Tax: $${Tax}`);
     let totalCost = cost + Tax;
     console.log(`Total Cost: $${totalCost}`);
+    */
+
+    const basketballProduct = {
+      name: 'basketball',
+      price: 2095,
+      ['delivery-time']: '3 days'
+    }
+    console.log(basketballProduct);
+
+    basketballProduct.price = basketballProduct.price + 500;
+    console.log(basketballProduct.price);
+    console.log(basketballProduct['delivery-time']);
+    console.log(basketballProduct);
+    /*
+    function comparePrice(product1 = (name, price),
+     product2 = (name, price)) {
+      if(product1 < product2) {
+        console.log('product1 is less expensive');
+      } else {
+        console.log('product2 is less expensive')
+      }
+    }
+    comparePrice((larry, 250), (sarah, 230));
+    */
+
+
+    console.log('Good Morning '.repeat(5));
   </script>
 </body>
 </html>

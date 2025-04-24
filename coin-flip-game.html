@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip Game</title>
+</head>
+<body>
+  <button onclick="
+    playGame('head');
+  ">heads</button>
+
+
+  <button onclick="
+    playGame('tail');
+  ">tails</button>
+
+  <script>
+    function playGame(playerMove) {
+      const computerMove = pickComputerMove();
+
+      let result = '';
+
+
+      if (playerMove === 'head') {
+
+      
+      if(computerMove === 'head') {
+        result = 'You win';
+      }else if (computerMove === 'tail') {
+        result = 'You loose';
+      }
+      
+    }else if(playerMove === 'tail') {
+
+      if (computerMove === 'head'){
+        result = 'You Loose';
+      }else if (computerMove === 'tail') {
+        result = 'You win';
+      }
+    }
+
+    alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}`)
+  }
+
+
+
+    function computerMove() {
+      const randomNumber = math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 2 ) {
+        computerMove = 'head';
+      } else if (randomNumber >= 1 / 2 && randomNumber < 1) {
+        computerMove = 'tail'
+      }
+      return computerMove;
+    }
+
+  </script>
+  
+</body>
+</html>
